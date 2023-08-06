@@ -1,0 +1,20 @@
+De Serge Théophile BANOGO, développeur full stack.
+
+# Prérequis avant de commencer
+    - Avoir docker installer sur sa machine
+    - Cloner le projet sur ce répo : https://github.com/tbanogo/challenge-agitex.git
+    - Extraire le projet et s'y placer dans la racine
+    - Lancer la commande : docker-composer up
+
+# Exécution
+    - Frontend : http://localhost:4200
+    - Base de données : http://localhost:8080/
+         - user : climax
+	 - pass : climax
+
+# Fonctionnalités
+    - Lire tous les types de fichiers, elle est conçu de façon à pouvoir intégrer facilement la lecture d'un fichier.
+    - Mais pour l'instant, seule les quatre types de fichiers sont pris en charge.
+    - Le calcul de la moyenne des salires par type de profession, fini côté backend mais encore intégré côté frontend.
+
+A très bientôt.
