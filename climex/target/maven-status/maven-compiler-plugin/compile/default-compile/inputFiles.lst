@@ -1,0 +1,14 @@
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\dao\entites\Customer.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\ClimexApplication.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\dao\repositories\CustomerRepository.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\servicesimpl\CustomerServiceImpl.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\rest\FileController.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\utils\dtos\CustomerDto.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\services\FileService.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\services\CustomerService.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\utils\beans\response\ApiResponse.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\servicesimpl\CsvFileService.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\rest\CustomerController.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\servicesimpl\XmlFileService.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\servicesimpl\JsonFileService.java
+C:\Users\hp\Desktop\_Prestation\_Persos\POSTE DFS AGITEX\climex\src\main\java\com\example\climex\business\servicesimpl\TextFileService.java
