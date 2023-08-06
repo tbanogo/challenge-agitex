@@ -1,0 +1,37 @@
+<p-toast></p-toast>
+<div class="container">
+  <div class="mb-3">
+    <h3 class="page-title">{{pageTitle}}</h3>
+  </div>
+  <!-- START FILE UPLOAD -->
+  <ng-container>
+    <div class="alert alert-info" role="alert">
+      <span class="alert-icon"><span class="visually-hidden">Info</span></span>
+      <div>
+        <p style="font-size: 1.2rem;">
+          Veuillez charger un fichier text, csv, json ou xml contenant les informations des clients.<br>
+          Veuillez vous assurer qu'il contienne bien cinq (5) colonnes: celle du nom, prénoms, age, profession et du salaire.<br>
+          Tout fichier ne respectant pas ces règles sera rejeté par le système.
+        </p>
+      </div>
+    </div>
+    <h3>Veuillez charger le fichier</h3>
+    <div class="input-group mb-3">
+      <input #activation (change)="onFileSelect($event)" type="file" class="form-control" id="activationInput">
+      <label for="activationInput" class="input-group-text"></label>
+      <button *ngIf="!isLoading" type="button" class="btn btn-success ml-2" (click)="onUpload()" [disabled]="!isSelect">Envoyer</button>
+      <button *ngIf="isLoading" type="button" class="btn btn-success ml-2" (click)="onUpload()">
+        <i class="pi pi-spin pi-spinner" style="font-size: 1rem;"></i>
+      </button>
+    </div>
+
+    <div *ngIf="isMessage && alert" class=" alert alert-success" role="alert">
+      <span class="alert-icon"></span>
+      {{ message }}
+    </div>
+    <div *ngIf="isMessage && !alert" class=" alert alert-danger" role="alert">
+      <span class="alert-icon"></span>
+      {{ message }}
+    </div>
+  </ng-container>
+</div>

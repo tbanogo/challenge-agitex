@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: climax
+      MYSQL_USER: climax
+      MYSQL_PASSWORD: climax
+    ports:
+      - 3306:3306
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: mariadb
+    ports:
+      - 8080:80
+
+  backend:
+    depends_on:
+      - mariadb
+    build: ./climex
+    restart: always
+    ports:
+      - 8081:8081
+
+  frontend:
+    depends_on:
+      - backend
+    build: ./frontend
+    ports:
+      - 4200:4200

@@ -1,0 +1,53 @@
+<div id="login-container">
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="col-md-4 lwr">
+      <div>
+        <img src="assets/images/logo-genesim.png" alt="app-logo" class="img-fluid app-logo">
+      </div>
+      <div>
+        <h3 class="app-title">Gestion des activations en masse</h3>
+      </div>
+      <!--      <span class="spacer"></span>-->
+      <div class="my-5">
+        <small class="copyright">Copyright, Orange Burkina Faso {{year}}</small>
+      </div>
+    </div>
+    <div class="col-md-8 fwr">
+      <div class="card-header text-center p-2" style="background: black !important;">
+        <b class="text-center" style="font-size: 1.5rem; color: white;">Connectez-vous à votre compte</b>
+      </div>
+      <h1 class="text-center text-primary py-3">
+        <i class="pi pi-user" style="font-size: 3rem;"></i>
+      </h1>
+      <form [formGroup]="loginForm" (submit)="handleLogin()">
+        <div class="mb-5">
+          <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                <i class="pi pi-user"></i>
+              </span>
+            <input class="p-3" type="text" required formControlName="username" [ngClass]="{'ng-dirty': (username!.invalid && submitted) || (username!.dirty && username!.invalid)}" pInputText placeholder="Nom d'utilisateur">
+          </div>
+          <small class="py-2 p-error" *ngIf="(username!.invalid && submitted) || (username!.dirty && username!.invalid)">Ce champ est obligatoire</small>
+        </div>
+        <div class="mb-5">
+          <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                <i class="pi pi-lock"></i>
+              </span>
+            <input class="p-3" type="password" required formControlName="password" [ngClass]="{'ng-dirty': (password!.invalid && submitted) || (password!.dirty && password!.invalid)}" pInputText placeholder="Mot de passe">
+          </div>
+          <small class="py-2 p-error" *ngIf="(password!.invalid && submitted) || (password!.dirty && password!.invalid)">Ce champ est obligatoire</small>
+        </div>
+        <button class="btn btn-primary btn-block py-2" [disabled]="loginForm.invalid" type="submit">
+          <ng-container *ngIf="!(isLoading | async)">
+            <i class="pi pi-sign-in px-2"></i>
+            Connexion
+          </ng-container>
+          <ng-container *ngIf="isLoading | async">
+            <i class="pi pi-spin pi-spinner" style="font-size: 1.5rem; color: white;"></i>
+          </ng-container>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
